@@ -7,7 +7,7 @@ module Turbo::Native::Navigation
   extend ActiveSupport::Concern
 
   included do
-    helper_method :turbo_native_app?
+    helper_method :turbo_native_app?  if respond_to?(:helper_method)
   end
 
   # Turbo Native applications are identified by having the string "Turbo Native" as part of their user agent.
